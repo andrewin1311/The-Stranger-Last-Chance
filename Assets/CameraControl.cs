@@ -21,19 +21,31 @@ public class CameraControl : MonoBehaviour
     {
         // Movement input using keyboard (W, A, S, D)
 
-        // I used ChatGPT for "Input.GetAxis("Horizontal")" and "Input.GetAxis("Vertical")" function.
-        // Searched up "how to change the coordinates of the camera in Unity".
         float left_right = Input.GetAxis("Horizontal"); // Move left or right using A/D.
         float forward_backward = Input.GetAxis("Vertical"); // Move foward or backward using W/S.
 
         // Calculate where the camera will move based on the movement input.
         Vector3 moveDirection = transform.forward * forward_backward + transform.right * left_right;
 
-        // Get the new position of the camera at a specific time.
-        CameraPosition += moveDirection * movementSpeed * Time.deltaTime;
+        // Calculate the potential new position
+        Vector3 potentialPosition = CameraPosition + moveDirection * movementSpeed * Time.deltaTime;
+
+        // Define ray direction and distance
+        Vector3 rayDirection = potentialPosition - transform.position;
+        float rayDistance = rayDirection.magnitude;
+
+        // Normalize direction for raycast
+        rayDirection.Normalize();
+
+        // Perform a sphere cast to check for obstacles in the way
+        // If the sphere cast does not hit anything, update the camera position.
+        float radius = 0.5f; // Match your camera's size
+        if (!Physics.SphereCast(transform.position, radius, rayDirection, out RaycastHit hitInfo, rayDistance))
+        {
+            CameraPosition = potentialPosition;
+        }
 
         // Rotation input using keyboard (Q, E)
-        // Help from notes in "lecture 3-4- Unity Scripting.pdf".
         float rotationInput = 0f;
 
         if (Input.GetKey(KeyCode.Q))
@@ -46,11 +58,7 @@ public class CameraControl : MonoBehaviour
         }
        
         // Rotate the camera around the y-axis using the Quaternion.Euler() function.
-        // Help from notes in "lecture 6 - Graphics.pdf".
         CameraRotation *= Quaternion.Euler(0, rotationInput * rotationSpeed * Time.deltaTime, 0);
-
-        // I used ChatGPT to search up and understand "how to make the camera move smoothly in Unity".
-        // Obtained "Vector3.Lerp()" and "Quaternion.Slerp()" function from here.
 
         // Smooth movement for the camera movement
         transform.position = Vector3.Lerp(transform.position, CameraPosition, smoother);
