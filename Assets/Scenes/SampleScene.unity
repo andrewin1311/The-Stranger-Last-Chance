@@ -119,6 +119,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &131831843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.004968
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
 --- !u!1001 &147882506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,6 +913,67 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1001 &530724653
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
 --- !u!1001 &556083430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2301,6 +2423,128 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d46bea498c7cd48af768524407a0ae, type: 3}
+--- !u!1001 &1502946127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
+--- !u!1001 &1605827358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
 --- !u!1 &1710418004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5066652069709306606, guid: a3b426b36e3be1a44ba4a2d3bf87430a, type: 3}
@@ -2397,6 +2641,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d46bea498c7cd48af768524407a0ae, type: 3}
+--- !u!1001 &1876811981
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.004968
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
 --- !u!1001 &1894543871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2519,6 +2824,67 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 881999927619870717, guid: a3b426b36e3be1a44ba4a2d3bf87430a, type: 3}
+--- !u!1001 &1972043049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988183766694041169, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_Name
+      value: ModernHouse interior (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7994995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8684403543082531406, guid: 59941a4a79882724594868a393c7c803, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59941a4a79882724594868a393c7c803, type: 3}
 --- !u!1001 &2053714261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3011,3 +3377,9 @@ SceneRoots:
   - {fileID: 1216247134}
   - {fileID: 308567966}
   - {fileID: 661026853}
+  - {fileID: 131831843}
+  - {fileID: 1876811981}
+  - {fileID: 530724653}
+  - {fileID: 1972043049}
+  - {fileID: 1605827358}
+  - {fileID: 1502946127}
