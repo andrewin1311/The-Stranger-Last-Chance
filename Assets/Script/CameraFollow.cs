@@ -3,8 +3,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;  // Reference to the character's transform
-    public Vector3 offset = new Vector3(0, 2, -5);    // Default offset distance from the character
-    public float smoothSpeed = 0.125f; // Smoothness of the camera movement
+    public Vector3 offset = new Vector3(0, 2, -3);    // Default offset distance from the character
+    public float smoothSpeed = 1f; // Smoothness of the camera movement
     private bool isCameraFlipped = false; // Track if the camera is flipped
 
     private void Update()

@@ -34,6 +34,14 @@ public class Door : MonoBehaviour {
 		}  
 	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			OpenDoor();
+		}
+	}
+
 	public void OpenDoor(){
 		open =!open;
 		asource.clip = open?openDoor:closeDoor;
