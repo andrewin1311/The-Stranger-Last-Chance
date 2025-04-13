@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d42f6867dac76045aa5f296f33c980e
+timeCreated: 1479591308
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89978
+  packageName: Basic Bandit
+  packageVersion: 1.0
+  assetPath: Assets/BasicBandit/DemoSceneBasicBandit/Materials/Black.mat
+  uploadId: 181855
