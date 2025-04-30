@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4675f30ca1f2ec4419c0a84c62a76e47
+timeCreated: 1479589374
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 89978
+  packageName: Basic Bandit
+  packageVersion: 1.0
+  assetPath: Assets/BasicBandit/DemoSceneBasicBandit/Controller/Basic_Controller.controller
+  uploadId: 181855
