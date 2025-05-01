@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 2222703f9efe56245b5a6e4acc93e2f2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 278977
+  packageName: EasyStart Third Person Controller
+  packageVersion: 1.0
+  assetPath: Assets/EasyStart Third Person Controller/Prefabs/Source/Models/FuturisticSoldier.fbx
+  uploadId: 649404
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -22,7 +29,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -88,16 +95,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.004
+    globalScale: 0.4
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
@@ -105,10 +112,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 278977
-  packageName: EasyStart Third Person Controller
-  packageVersion: 1.0
-  assetPath: Assets/EasyStart Third Person Controller/Prefabs/Source/Models/FuturisticSoldier.fbx
-  uploadId: 649404
