@@ -104,6 +104,12 @@ public class ThirdPersonController : MonoBehaviour
             //isCrouching = false; 
         }
 
+        if (Input.GetMouseButtonDown(0)) // left click
+        {
+            animator.SetTrigger("shoot");
+            Debug.Log("Shoot triggered");
+        }
+
         HeadHittingDetect();
 
     }
