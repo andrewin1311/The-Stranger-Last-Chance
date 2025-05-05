@@ -24,6 +24,8 @@ public class ZombieMover : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
     private bool playerWasSeenRecently;
 
+    private Animator animator;  // ✅ NEW: Animator reference
+
     private void Awake()
     {
         player = GameObject.Find("ThirdPersonController")?.transform;
@@ -33,6 +35,7 @@ public class ZombieMover : MonoBehaviour
         }
 
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>(); // ✅ Initialize animator
     }
 
     private void Update()
@@ -54,13 +57,24 @@ public class ZombieMover : MonoBehaviour
         {
             Debug.Log("🧍 Player not seen. Trying to patrol...");
             Patroling();
+            animator.SetBool("IsWalking", true);
         }
         else if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
+            animator.SetBool("IsWalking", true);
         }
         else if (playerInAttackRange && playerInSightRange)
         {
+            animator.SetBool("IsWalking", false);
+
+            if (!alreadyAttacked)
+            {
+                animator.SetTrigger("Attack");
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+
+            }
             AttackPlayer();
         }
     }
@@ -129,6 +143,8 @@ public class ZombieMover : MonoBehaviour
         if (!alreadyAttacked)
         {
             Debug.Log("💢 AttackPlayer() called");
+
+            animator.SetTrigger("Attack");  // ✅ Trigger attack animation
 
             Collider[] hitPlayers = Physics.OverlapSphere(transform.position, attackRange, whatIsPlayer);
 
