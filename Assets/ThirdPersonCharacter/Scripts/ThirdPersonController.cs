@@ -1,4 +1,5 @@
 ﻿
+using System.Collections;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
@@ -92,9 +93,16 @@ public class ThirdPersonController : MonoBehaviour
 
         }
 
-        // Jump animation
-        if( animator != null )
-            animator.SetBool("air", cc.isGrounded == false );
+        // Jump / Air animation
+        if (animator != null)
+        {
+            // Check if the character is in the air due to jumping or falling
+            bool isAscending = isJumping && cc.velocity.y > 0.1f;
+            bool isFalling = !cc.isGrounded && cc.velocity.y < -0.1f;
+
+            // Set "air" animation only when actually airborne
+            animator.SetBool("air", isAscending || isFalling);
+        }
 
         // Handle can jump or not
         if ( inputJump && cc.isGrounded )
@@ -104,10 +112,15 @@ public class ThirdPersonController : MonoBehaviour
             //isCrouching = false; 
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            animator.SetTrigger("Shoot");
+            Debug.Log("Player shoots! BAM!");
+        }
+
         HeadHittingDetect();
 
     }
-
 
     // With the inputs and animations defined, FixedUpdate is responsible for applying movements and actions to the player
     private void FixedUpdate()

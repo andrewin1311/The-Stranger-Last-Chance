@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class BanditControl : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class BanditControl : MonoBehaviour
     public float sightRange = 15f, attackRange = 2f;
     public bool playerInSightRange, playerInAttackRange;
     private bool playerWasSeenRecently;
+
+    private bool inFightIdle = false;
 
     private void Awake()
     {
@@ -153,6 +156,12 @@ public class BanditControl : MonoBehaviour
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsSprinting", true); // Optional for sprint animation
         animator.Play("SprintJump_ToLeft_R");
+
+        if (inFightIdle)
+        {
+            animator.SetBool("IsClose", false);
+            inFightIdle = false;
+        }
     }
 
     private void AttackPlayer()
@@ -162,33 +171,47 @@ public class BanditControl : MonoBehaviour
         lookDirection.y = 0; // Lock the Y-axis so the bandit stays upright
         transform.rotation = Quaternion.LookRotation(lookDirection);
 
+        if (!inFightIdle)
+        {
+            animator.SetBool("IsClose", true);
+            inFightIdle = true;
+        } 
+
         if (!alreadyAttacked)
         {
             Debug.Log("💢 AttackPlayer() called");
 
-            Collider[] hitPlayers = Physics.OverlapSphere(transform.position, attackRange, whatIsPlayer);
-
-            foreach (Collider playerCollider in hitPlayers)
-            {
-                Debug.Log("🎯 Hit something: " + playerCollider.name);
-
-                if (playerCollider.CompareTag("Player"))
-                {
-                    Debug.Log("👊 Player hit! Dealing damage.");
-                    PlayerHealth ph = playerCollider.GetComponent<PlayerHealth>();
-                    if (ph != null)
-                    {
-                        ph.TakeDamage(10);
-                    }
-                    else
-                    {
-                        Debug.LogWarning("⚠ PlayerHealth script not found on Player!");
-                    }
-                }
-            }
-
+            // Wait for the animation to finish before applying damage
+            StartCoroutine(DealDamageAfterDelay()); // Adjust delay to match your punch animation length
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    // Used ChatGPT for this to figure out how to time player damage with punch animation.
+    private IEnumerator DealDamageAfterDelay()
+    {
+        yield return new WaitForSeconds(0.6f);
+
+        Collider[] hitPlayers = Physics.OverlapSphere(transform.position, attackRange, whatIsPlayer);
+
+        foreach (Collider playerCollider in hitPlayers)
+        {
+            Debug.Log("🎯 Hit something: " + playerCollider.name);
+
+            if (playerCollider.CompareTag("Player"))
+            {
+                Debug.Log("👊 Player hit! Dealing delayed damage.");
+                PlayerHealth ph = playerCollider.GetComponent<PlayerHealth>();
+                if (ph != null)
+                {
+                    ph.TakeDamage(10);
+                }
+                else
+                {
+                    Debug.LogWarning("⚠ PlayerHealth script not found on Player!");
+                }
+            }
         }
     }
 
