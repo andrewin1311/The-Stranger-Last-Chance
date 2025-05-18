@@ -113,13 +113,11 @@ public class ZombieMover : MonoBehaviour
     {
         if (!walkPointSet)
         {
-            Debug.Log("🔍 Searching for new patrol point...");
             SearchWalkPoint();
         }
 
         if (walkPointSet)
         {
-            Debug.Log("🚶 Moving to walk point: " + walkPoint);
             agent.SetDestination(walkPoint);
         }
 
@@ -127,7 +125,6 @@ public class ZombieMover : MonoBehaviour
 
         if (distanceToWalkPoint.magnitude < 1f)
         {
-            Debug.Log("✅ Reached patrol point.");
             walkPointSet = false;
         }
     }
