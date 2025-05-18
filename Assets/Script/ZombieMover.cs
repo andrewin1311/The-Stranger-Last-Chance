@@ -25,6 +25,9 @@ public class ZombieMover : MonoBehaviour
     private bool playerWasSeenRecently;
 
     private Animator animator;  // ✅ NEW: Animator reference
+    private AudioSource audioSource;  // 🔊 For zombie sounds
+    public AudioClip growlSound;      // 🧟 Sound to play when near player
+    private bool hasPlayedGrowl;   
 
     private void Awake()
     {
@@ -36,6 +39,8 @@ public class ZombieMover : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>(); // ✅ Initialize animator
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -77,6 +82,24 @@ public class ZombieMover : MonoBehaviour
             }
             AttackPlayer();
         }
+        if (playerInSightRange && !hasPlayedGrowl)
+        {
+            PlayGrowlSound();
+        }
+        else if (!playerInSightRange)
+        {
+            hasPlayedGrowl = false; // Reset when player exits range
+        }
+    }
+
+    private void PlayGrowlSound()
+    {
+        if (growlSound != null && audioSource != null)
+        {
+            audioSource.clip = growlSound;
+            audioSource.Play();
+            hasPlayedGrowl = true;
+        }
     }
 
     private void ForgetPlayer()
@@ -90,13 +113,11 @@ public class ZombieMover : MonoBehaviour
     {
         if (!walkPointSet)
         {
-            Debug.Log("🔍 Searching for new patrol point...");
             SearchWalkPoint();
         }
 
         if (walkPointSet)
         {
-            Debug.Log("🚶 Moving to walk point: " + walkPoint);
             agent.SetDestination(walkPoint);
         }
 
@@ -104,7 +125,6 @@ public class ZombieMover : MonoBehaviour
 
         if (distanceToWalkPoint.magnitude < 1f)
         {
-            Debug.Log("✅ Reached patrol point.");
             walkPointSet = false;
         }
     }

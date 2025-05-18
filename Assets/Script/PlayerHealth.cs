@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Needed to switch scenes
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player died!");
-        // You can add death animation or respawn here
+        Debug.Log("💀 Player died! Switching to GameOver scene...");
+        SceneManager.LoadScene("GameOver"); // ✅ This line triggers the scene change
     }
 }
