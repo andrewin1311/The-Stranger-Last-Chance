@@ -19,6 +19,6 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("💀 Player died! Switching to GameOver scene...");
-        SceneManager.LoadScene("GameOver"); // ✅ This line triggers the scene change
+        SceneManager.LoadScene("GameOverScene"); // ✅ This line triggers the scene change
     }
 }
