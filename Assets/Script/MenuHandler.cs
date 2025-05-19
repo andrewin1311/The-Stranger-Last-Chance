@@ -1,3 +1,7 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -124,7 +128,12 @@ public class MenuHandler : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        
         Debug.Log("Quit Game");
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
