@@ -7,6 +7,8 @@ public class MenuHandler : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject audioPanel;
     public GameObject mainButtonsPanel;
+    public GameObject graphicsPanel;
+    public GameObject controlsPanel;
 
     public void StartGame()
     {
@@ -33,6 +35,8 @@ public class MenuHandler : MonoBehaviour
         audioPanel.SetActive(false);
         optionsPanel.SetActive(true);
         mainButtonsPanel.SetActive(false);
+        graphicsPanel.SetActive(false);
+        controlsPanel.SetActive(false);
         Debug.Log("Returned to Options");
     }
     public void BackToMainMenu()
@@ -43,14 +47,35 @@ public class MenuHandler : MonoBehaviour
         Debug.Log("Back to main menu");
     }
 
+    
     public void OpenGraphicsSettings()
     {
-        Debug.Log("Graphics settings clicked");
+        mainButtonsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        audioPanel.SetActive(false);
+        graphicsPanel.SetActive(true);
+        controlsPanel.SetActive(false);
     }
 
     public void OpenControlsSettings()
     {
-        Debug.Log("Controls settings clicked");
+        mainButtonsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        audioPanel.SetActive(false);
+        graphicsPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+
+    public void BackToOptionsFromGraphics()
+    {
+        graphicsPanel.SetActive(false);
+        optionsPanel.SetActive(true);
+    }
+
+    public void BackToOptionsFromControls()
+    {
+        controlsPanel.SetActive(false);
+        optionsPanel.SetActive(true);
     }
 
 
