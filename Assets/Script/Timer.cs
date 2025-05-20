@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
         else
         {
             time.text = "00:00";
-            SceneManager.LoadScene("GameOverScene");
+            SceneManager.LoadScene("YouWinScene");
         }
     }
 }

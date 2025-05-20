@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class ZombieMover : MonoBehaviour
 {
@@ -72,14 +73,7 @@ public class ZombieMover : MonoBehaviour
         else if (playerInAttackRange && playerInSightRange)
         {
             animator.SetBool("IsWalking", false);
-
-            if (!alreadyAttacked)
-            {
-                animator.SetTrigger("Attack");
-                alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), timeBetweenAttacks);
-
-            }
+            animator.SetTrigger("Attack");
             AttackPlayer();
         }
         if (playerInSightRange && !hasPlayedGrowl)
@@ -158,37 +152,44 @@ public class ZombieMover : MonoBehaviour
     private void AttackPlayer()
     {
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        Vector3 lookDirection = player.position - transform.position;
+        lookDirection.y = 0; // Lock the Y-axis so the zombie stays upright
+        transform.rotation = Quaternion.LookRotation(lookDirection);
 
         if (!alreadyAttacked)
         {
             Debug.Log("💢 AttackPlayer() called");
 
-            animator.SetTrigger("Attack");  // ✅ Trigger attack animation
-
-            Collider[] hitPlayers = Physics.OverlapSphere(transform.position, attackRange, whatIsPlayer);
-
-            foreach (Collider playerCollider in hitPlayers)
-            {
-                Debug.Log("🎯 Hit something: " + playerCollider.name);
-
-                if (playerCollider.CompareTag("Player"))
-                {
-                    Debug.Log("👊 Player hit! Dealing damage.");
-                    PlayerHealth ph = playerCollider.GetComponent<PlayerHealth>();
-                    if (ph != null)
-                    {
-                        ph.TakeDamage(10);
-                    }
-                    else
-                    {
-                        Debug.LogWarning("⚠️ PlayerHealth script not found on Player!");
-                    }
-                }
-            }
-
+            // Wait for the animation to finish before applying damage
+            StartCoroutine(DealDamageAfterDelay()); // Adjust delay to match your punch animation length
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    private IEnumerator DealDamageAfterDelay()
+    {
+        yield return new WaitForSeconds(0.6f);
+
+        Collider[] hitPlayers = Physics.OverlapSphere(transform.position, attackRange, whatIsPlayer);
+
+        foreach (Collider playerCollider in hitPlayers)
+        {
+            Debug.Log("🎯 Hit something: " + playerCollider.name);
+
+            if (playerCollider.CompareTag("Player"))
+            {
+                Debug.Log("👊 Player hit! Dealing delayed damage.");
+                PlayerHealth ph = playerCollider.GetComponent<PlayerHealth>();
+                if (ph != null)
+                {
+                    ph.TakeDamage(10);
+                }
+                else
+                {
+                    Debug.LogWarning("⚠ PlayerHealth script not found on Player!");
+                }
+            }
         }
     }
 
